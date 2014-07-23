@@ -1,0 +1,7 @@
+id:          basic
+label:       Basic
+description: Movable Type theme for generic use.
+author_name: @yagishita
+author_link: http://twitter.com/yagishita
+version:     0.1
+class:       website

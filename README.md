@@ -1,4 +1,9 @@
 mt-theme-basic
 ==============
 
-This is the basic theme for Movable Type. And this will be used at #04.
+MT東京 #04 「MovableTypeテーマをつくる」で利用するテーマです。
+ブランチを切り替えることで、テーマの機能を段階的に勉強できます。
+
+## step 01
+
+- 何も登録しないテーマです。
