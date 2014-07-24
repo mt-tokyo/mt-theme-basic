@@ -3,10 +3,49 @@ label:       Basic
 description: Movable Type theme for generic use.
 author_name: @yagishita
 author_link: http://twitter.com/yagishita
-version:     0.2
+version:     0.3
 class:       website
-order:       10
 protected:   1
 thumbnail_file:        thumbnails/thumb.png
 thumbnail_file_medium: thumbnails/thumb-medium.png
 thumbnail_file_small:  thumbnails/thumb-small.png
+elements:
+  template_set:
+    component: core
+    importer:  template_set
+    name:      template set
+    data:
+      base_path: templates
+      require:   1
+      templates:
+        index:
+          robots:
+            label: robots.txt
+            outfile: robots.txt
+            rebuild_me: 0
+            build_type: 2
+          main_index:
+            label: Main Index
+            outfile: index.html
+            rebuild_me: 1
+          styles:
+            label: Stylesheet
+            outfile: styles.css
+            rebuild_me: 0
+            build_type: 2
+          javascript:
+            label: JavaScript
+            outfile: mt.js
+            rebuild_me: 0
+            build_type: 2
+          feed_recent:
+            label: 'Feed - Recent Entries'
+            outfile: atom.xml
+            rebuild_me: 0
+            build_type: 0
+          rsd:
+            label: RSD
+            outfile: rsd.xml
+            rebuild_me: 0
+            rebuild_me: 0
+            build_type: 0
