@@ -8,38 +8,23 @@
 <mt:Ignore><mt:ArchiveType setvar="pgType"></mt:Ignore>
 <!DOCTYPE html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><mt:Var name='pgTitle'></title>
-<meta charset="<mt:PublishCharset>">
-<meta name="description" content="<mt:Var name='pgTitle'>">
-<meta name="keywords" content="<mt:Var name='pgTitle'>">
-<meta name="author" content="<mt:Var name='pgTitle'>">
-<meta name="generator" content="<mt:Var name='pgGenerator'>" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<mt:Link template='styles'>">
-<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:Link template='feed_recent'>" />
-<mt:If name="pgURL" eq="/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="<mt:Link template='rsd'>" /></mt:If>
-<!--[if lt IE 9]>
-<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<link rel="shortcut icon" href="<mt:Var name='pgShortcut'>">
-<!-- iOS/Android bookmarking icons-->
-<!--
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="196x196" href="">
-<link rel="apple-touch-icon" sizes="152x152" href="">
--->
-<!-- non-render-blocking scripts -->
-<script src="<mt:Link template='javascript'>" async></script>
+<mt:Include module="module_html_head">
 </head>
 <mt:Unless name="compress" regex_replace='/https?:\/\/www\.example\.com/g','' regex_replace='/^\s+/gm',''>
 <body>
-  <div id="header"></div>
-  <div id="global-nav"></div>
-  <div id="breadcrumbs"></div>
+  <div id="header">
+    <mt:Include module="module_html_head">
+  </div>
+  <div id="global-nav">
+    <mt:Include module="module_global-nav">
+  </div>
+  <div id="breadcrumbs">
+    <mt:Include module="module_breadcrumbs">
+  </div>
   <div id="main">
-    <div id="side-nav"></div>
+    <div id="side-nav">
+      <mt:Include module="module_side-nav">
+    </div>
     <div id="contents">
       <mt:Entries limit="10">
         <mt:If name="__first__"><dl></mt:If>
@@ -49,7 +34,9 @@
       </mt:Entries>
     </div>
   </div>
-  <div id="footer"></div>
+  <div id="footer">
+    <mt:Include module="module_footer">
+  </div>
 <!-- render-blocking scripts -->
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 </body></mt:Unless>

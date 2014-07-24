@@ -3,7 +3,7 @@ label:       Basic
 description: Movable Type theme for generic use.
 author_name: @yagishita
 author_link: http://twitter.com/yagishita
-version:     0.3
+version:     0.4
 class:       website
 protected:   1
 thumbnail_file:        thumbnails/thumb.png
@@ -47,5 +47,17 @@ elements:
             label: RSD
             outfile: rsd.xml
             rebuild_me: 0
-            rebuild_me: 0
             build_type: 0
+        module:
+          module_html_head:
+            label: module_html_head
+          module_header:
+            label: module_header
+          module_global-nav:
+            label: module_global-nav
+          module_breadcrumbs:
+            label: module_breadcrumbs
+          module_side-nav:
+            label: module_side-nav
+          module_footer:
+            label: module_footer
