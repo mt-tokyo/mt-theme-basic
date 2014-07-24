@@ -5,7 +5,6 @@ author_name: @yagishita
 author_link: http://twitter.com/yagishita
 version:     0.2
 class:       website
-order:       10
 protected:   1
 thumbnail_file:        thumbnails/thumb.png
 thumbnail_file_medium: thumbnails/thumb-medium.png
