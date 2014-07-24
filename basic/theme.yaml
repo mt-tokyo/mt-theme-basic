@@ -47,5 +47,4 @@ elements:
             label: RSD
             outfile: rsd.xml
             rebuild_me: 0
-            rebuild_me: 0
             build_type: 0
