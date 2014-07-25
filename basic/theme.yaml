@@ -3,13 +3,25 @@ label:       Basic
 description: Movable Type theme for generic use.
 author_name: @yagishita
 author_link: http://twitter.com/yagishita
-version:     0.6
+version:     0.7
 class:       website
 protected:   1
 thumbnail_file:        thumbnails/thumb.png
 thumbnail_file_medium: thumbnails/thumb-medium.png
 thumbnail_file_small:  thumbnails/thumb-small.png
 elements:
+  default_prefs:
+    component: core
+    importer:  default_prefs
+    data:
+      use_revision:           5
+      max_revisions_entry:    5
+      max_revisions_template: 5
+      convert_paras:          0
+      include_cache:          1
+      allow_comments_default: 0
+      allow_pings_default:    0
+      allow_reg_comments:     0
   default_categories:
     component: core
     importer: default_categories
@@ -56,7 +68,7 @@ elements:
             mappings:
               entry_archive:
                 archive_type: Individual
-                file_template: news/<mt:EntryDate format="%Y/">/<mt:EntryDate format="%Y/%m">/<mt:EntryBasename>.html
+                file_template: news/<mt:EntryDate format="%Y/%m">/<mt:EntryBasename>.html
                 preferred: 1
         index:
           robots:
