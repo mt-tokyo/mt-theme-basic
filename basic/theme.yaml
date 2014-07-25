@@ -56,7 +56,7 @@ elements:
             mappings:
               entry_archive:
                 archive_type: Individual
-                file_template: news/<mt:EntryDate format="%Y/">/<mt:EntryDate format="%Y/%m">/<mt:EntryBasename>.html
+                file_template: news/<mt:EntryDate format="%Y/%m">/<mt:EntryBasename>.html
                 preferred: 1
         index:
           robots:
