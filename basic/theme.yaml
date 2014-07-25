@@ -3,13 +3,18 @@ label:       Basic
 description: Movable Type theme for generic use.
 author_name: @yagishita
 author_link: http://twitter.com/yagishita
-version:     0.4
+version:     0.5
 class:       website
 protected:   1
 thumbnail_file:        thumbnails/thumb.png
 thumbnail_file_medium: thumbnails/thumb-medium.png
 thumbnail_file_small:  thumbnails/thumb-small.png
 elements:
+  blog_static_files:
+    component: core
+    importer:  blog_static_files
+    data:
+      - images
   template_set:
     component: core
     importer:  template_set

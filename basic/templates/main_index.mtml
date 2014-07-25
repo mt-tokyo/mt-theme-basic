@@ -4,7 +4,6 @@
 <mt:SetVarBlock name="pgKeywords"></mt:SetVarBlock>
 <mt:SetVarBlock name="pgAuthor"></mt:SetVarBlock>
 <mt:SetVarBlock name="pgGenerator"><mt:ProductName version="1" escape="html"></mt:SetVarBlock>
-<mt:SetVarBlock name="pgShortcut"></mt:SetVarBlock>
 <mt:Ignore><mt:ArchiveType setvar="pgType"></mt:Ignore>
 <!DOCTYPE html>
 <head>
@@ -29,7 +28,7 @@
       <mt:Entries limit="10">
         <mt:If name="__first__"><dl></mt:If>
         <dt><mt:EntryDate format="%Y.%m.%d"></dt>
-        <dd><a href="<mt:EntryPermalink"><mt:EntryTitle escape="html"></a></dd>
+        <dd><a href="<mt:EntryPermalink>"><mt:EntryTitle escape="html"></a></dd>
         <mt:If name="__last__"></dl></mt:If>
       </mt:Entries>
     </div>
