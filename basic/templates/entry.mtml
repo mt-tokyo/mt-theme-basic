@@ -1,5 +1,5 @@
-<mt:WebSiteURL regex_replace='/https?:\/\/www\.example\.com/g','' setvar="pgURL">
-<mt:SetVarBlock name="pgTitle"></mt:SetVarBlock>
+<mt:EntryPermalink regex_replace='/https?:\/\/www\.example\.com/g','' setvar="pgURL">
+<mt:SetVarBlock name="pgTitle"><mt:EntryTitle escape="html"></mt:SetVarBlock>
 <mt:SetVarBlock name="pgDescription"></mt:SetVarBlock>
 <mt:SetVarBlock name="pgKeywords"></mt:SetVarBlock>
 <mt:SetVarBlock name="pgAuthor"></mt:SetVarBlock>
@@ -25,12 +25,8 @@
       <mt:Include module="module_side-nav">
     </div>
     <div id="contents">
-      <mt:Entries limit="10">
-        <mt:If name="__first__"><dl></mt:If>
-        <dt><mt:EntryDate format="%Y.%m.%d"></dt>
-        <dd><a href="<mt:EntryPermalink>"><mt:EntryTitle escape="html"></a></dd>
-        <mt:If name="__last__"></dl></mt:If>
-      </mt:Entries>
+      <h1><mt:Var name="pgTitle"></h1>
+      <mt:EntryBody>
     </div>
   </div>
   <div id="footer">

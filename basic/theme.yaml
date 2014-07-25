@@ -3,18 +3,32 @@ label:       Basic
 description: Movable Type theme for generic use.
 author_name: @yagishita
 author_link: http://twitter.com/yagishita
-version:     0.5
+version:     0.6
 class:       website
 protected:   1
 thumbnail_file:        thumbnails/thumb.png
 thumbnail_file_medium: thumbnails/thumb-medium.png
 thumbnail_file_small:  thumbnails/thumb-small.png
 elements:
+  default_categories:
+    component: core
+    importer: default_categories
+    data:
+      news:
+        label:           お知らせ
+        description:     お知らせに関するカテゴリです。
+        children:
+          event:
+            label:       イベント・セミナー
+            description: イベント・セミナー情報です。
+      release:
+        label:           プレスリリース
+        description:     プレスリリースに関するカテゴリです。
   blog_static_files:
     component: core
     importer:  blog_static_files
     data:
-      - images
+      - common
   template_set:
     component: core
     importer:  template_set
@@ -23,6 +37,27 @@ elements:
       base_path: templates
       require:   1
       templates:
+        archive:
+          category_archive:
+            label: Category Entry Listing
+            mappings:
+              category:
+                archive_type: Category
+                preferred: 1
+          monthly_archive:
+            label: Monthly Entry Listing
+            mappings:
+              monthly:
+                archive_type: Monthly
+                preferred: 1
+        individual:
+          entry:
+            label: Entry
+            mappings:
+              entry_archive:
+                archive_type: Individual
+                file_template: news/<mt:EntryDate format="%Y/">/<mt:EntryDate format="%Y/%m">/<mt:EntryBasename>.html
+                preferred: 1
         index:
           robots:
             label: robots.txt
