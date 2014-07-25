@@ -14,7 +14,7 @@ elements:
     component: core
     importer:  blog_static_files
     data:
-      - images
+      - common
   template_set:
     component: core
     importer:  template_set
